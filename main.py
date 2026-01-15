@@ -1,5 +1,6 @@
 #Martin Couture https://github.com/geocot
 #Janvier 2026
+#Explication : https://youtu.be/MRve3jIFudI
 
 from PIL import Image
 image = "imageBase.jpg"
@@ -85,5 +86,6 @@ nouvelleImage.save("imageBaseEncode.png")
 
 #Décodage
 print(decodageMessage("imageBaseEncode.png"))
+
 
 
