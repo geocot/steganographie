@@ -1,7 +1,9 @@
+#Martin Couture https://github.com/geocot
+#Janvier 2026
+
 from PIL import Image
-#https://www.mathweb.fr/euclide/2020/06/13/steganographie-python/
 image = "imageBase.jpg"
-message = "Voici un petit test pour voir si tout vas bien!"
+message = "Bonjour à tous!"
 
 def formatageBinaire(valeur):
     return valeur[2:].rjust(8, '0')
@@ -75,12 +77,13 @@ def decodageMessage(image):
         else:
             message += chr(int(octet, 2))
             octet = str(canalRougevaleur[j]%2)
-    print(message)
+    return message
 
 #Encodage
 nouvelleImage = encodageBinaire(message, image)
 nouvelleImage.save("imageBaseEncode.png")
 
 #Décodage
-decodageMessage("imageBaseEncode.png")
+print(decodageMessage("imageBaseEncode.png"))
+
 
